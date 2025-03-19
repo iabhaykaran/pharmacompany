@@ -75,8 +75,20 @@ body {
 .linksnav {
   display: flex;
   justify-content: space-evenly;
+overflow: scroll;
+
+
   color: #000000;
 }
+
+
+.linksnav::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
 .linksnav li button {
   background-color: #0f4c6d;
   border-radius: 3px;
