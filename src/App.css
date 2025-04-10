@@ -10,11 +10,10 @@
   margin: 0;
 }
 
-
 .app-container {
   min-height: 100vh;
 
-  background: linear-gradient(to right, #e0f7fa, #d3d9da);
+  /* background: linear-gradient(to right, #e0f7fa, #d3d9da); */
   font-family: "Segoe UI", sans-serif;
 }
 .news-heading {
@@ -38,16 +37,15 @@
   font-weight: bold;
 }
 
-.nav-links button {
-  background: none;
-  border: none;
+ button {
+
   font-size: 1.2rem;
-  margin-left: 10px;
+  margin-right: 20px;
   cursor: pointer;
 }
 
 .news-tiles {
-  background-color: #d4dada;
+  background-color: #f2f5f5;
   padding: 10px;
   /* border: 0.5px solid rgb(149, 147, 147); */
   font-size: 0.8rem;
@@ -59,7 +57,8 @@
 .linksnav {
   display: flex;
   justify-content: space-evenly;
-  overflow: scroll;
+  overflow-x: scroll;
+  flex-direction: row;
   background-color: #bde0fe;
 }
 

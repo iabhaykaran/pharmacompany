@@ -47,7 +47,7 @@ const App = () => {
           </li>
           <li>
             <button onClick={() => setActivePage("customers")}>
-              Real State
+              Properties
             </button>
           </li>
           <li>
