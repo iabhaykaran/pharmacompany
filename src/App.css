@@ -37,9 +37,7 @@
   font-weight: bold;
 }
 
- button {
-
-  font-size: 1.2rem;
+li button {
   margin-right: 20px;
   cursor: pointer;
 }
@@ -56,7 +54,7 @@
 }
 .linksnav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   overflow-x: scroll;
   flex-direction: row;
   background-color: #bde0fe;
