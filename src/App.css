@@ -10,14 +10,11 @@
   margin: 0;
 }
 
-body {
-  /* background-color: #e1e1e1; */
-  /* background-color: #eeeeee; */
-}
+
 .app-container {
   min-height: 100vh;
 
-  /* background: linear-gradient(to right, #e0f7fa, #d3d9da); */
+  background: linear-gradient(to right, #e0f7fa, #d3d9da);
   font-family: "Segoe UI", sans-serif;
 }
 .news-heading {
