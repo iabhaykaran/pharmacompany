@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
+import Side from "./Side";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import BlogList from "./BlogList";
+import BlogDetail from "./BlogDetail";
 
 const App = () => {
   const [activePage, setActivePage] = useState("home");
@@ -21,30 +25,40 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <header className="header">
-        <nav className="nav">
-          <h1 className="logo">PharmaCo</h1>
-        </nav>
-      </header>
+      <Router>
+        <header className="header">
+          <nav className="nav">
+            <h1 className="logo">Times of INDIA</h1>
+          </nav>
+        </header>
 
-      <ul className="linksnav">
-        <li>
-          <button onClick={() => setActivePage("home")}>Home</button>
-        </li>
-        <li>
-          <button onClick={() => setActivePage("about")}>About</button>
-        </li>
-        <li>
-          <button onClick={() => setActivePage("customers")}>Customers</button>
-        </li>
-        <li>
-          <button onClick={() => setActivePage("services")}>Services</button>
-        </li>
-        <li>
-          <button onClick={() => setActivePage("contact")}>Contact</button>
-        </li>
-      </ul>
-      {renderPage()}
+        <ul className="linksnav">
+          <li>
+            <Side />
+          </li>
+          <li>
+            <button onClick={() => setActivePage("home")}>Live.</button>
+          </li>
+          <li>
+            <button onClick={() => setActivePage("home")}>Home</button>
+          </li>
+          <li>
+            <button onClick={() => setActivePage("about")}>world</button>
+          </li>
+          <li>
+            <button onClick={() => setActivePage("customers")}>
+              Real State
+            </button>
+          </li>
+          <li>
+            <button onClick={() => setActivePage("services")}>Trending</button>
+          </li>
+          <li>
+            <button onClick={() => setActivePage("contact")}>Cricket</button>
+          </li>
+        </ul>
+        {renderPage()}
+      </Router>
     </div>
   );
 };
@@ -76,25 +90,13 @@ const LandingPage = ({ setActivePage }) => {
 
 const HomePage = () => (
   <div>
-    <div className="box">
-      <h1>PharmaCO</h1>
-      <p style={{ color: "#eeeeee" }}>Leading in top in the market</p>
-    </div>
     <div className="content">
-      <h2 className="section-title">PharmaCo</h2>
-
-      <img className="img" src="j.avif" height="350px" width="100%" alt="#" />
-
-      <p className="description">
-        We are dedicated to providing quality pharmaceutical products for a
-        healthier world. Our mission is to improve lives by delivering trusted
-        healthcare solutions.
-      </p>
-      <p className="description">
-        We are dedicated to providing quality pharmaceutical products for a
-        healthier world. Our mission is to improve lives by delivering trusted
-        healthcare solutions.
-      </p>
+      <div className="p-1">
+        <Routes>
+          <Route path="/" element={<BlogList />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
+        </Routes>
+      </div>
     </div>
   </div>
 );
