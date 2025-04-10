@@ -28,14 +28,17 @@ const App = () => {
       <Router>
         <header className="header">
           <nav className="nav">
-            <h1 className="logo">Times of INDIA</h1>
+        
+            <Side />
+
+            <h1 className="logo" style={{ marginLeft: "10px" }}>
+              Times of INDIA
+            </h1>
           </nav>
         </header>
 
         <ul className="linksnav">
-          <li>
-            <Side />
-          </li>
+          
           <li>
             <button onClick={() => setActivePage("home")}>Live.</button>
           </li>
