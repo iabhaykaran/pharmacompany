@@ -32,7 +32,7 @@ const App = () => {
             <Side />
 
             <h1 className="logo" style={{ marginLeft: "10px" }}>
-              Times of INDIA
+              Hindus Times
             </h1>
           </nav>
         </header>
