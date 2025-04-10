@@ -13,11 +13,15 @@ export default function BlogDetail() {
 
   return (
     <>
-      <Link to="/" className="text-blue-600 hover:underline block mt-4">
-        BACK
-      </Link>
-      <div  className="news-card"  >
+      <div className="news-card">
+        <div>
+          <Link to="/" className="back-btn">
+            Back
+          </Link>
+        </div>
         <h2 className="news-heading">{blog.title}</h2>
+     
+        <br />
         <p className="mt-2">{blog.content}</p>
       </div>
     </>
