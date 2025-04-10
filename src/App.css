@@ -13,12 +13,7 @@ a {
   text-decoration: none;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 
 .content {
   padding: 10px;
